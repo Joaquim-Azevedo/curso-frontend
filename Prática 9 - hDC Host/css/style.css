@@ -340,3 +340,60 @@ footer {
     padding: 0 8rem;
   }
 }
+
+/* celulares: a partir de 576px */
+
+@media (max-width: 576px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .navbar-items li {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .services-container ul {
+    flex-direction: column;
+  }
+
+  .pricing-container p {
+    font-size: 20px;
+    padding: 0 2rem;
+  }
+
+  .plans-container {
+    flex-direction: column;
+  }
+
+  .plan {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .plan ul {
+    width: 100%;
+  }
+
+  .searchdomain-container h2 {
+    padding: 0 1rem;
+  }
+
+  .searchdomain-container p {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .searchdomain-container input[type="text"] {
+    font-size: 18px;
+  }
+
+  .contact-container input[type="text"],
+  .contact-container input[type="email"] {
+    width: 80%;
+  }
+
+  .contact-container textarea {
+    width: 90%;
+  }
+}
