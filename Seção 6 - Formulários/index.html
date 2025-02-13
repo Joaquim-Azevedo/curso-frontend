@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Formulários HTML</h1>
+    <!-- Criando um formulário -->
+    <form action="register.php" method="get">
+        <div>
+            <label for="">Usuário:</label>
+            <input type="text" placeholder="Digite aqui">
+        </div>
+        <!-- Ligando a label ao input com "for" e "name"-->
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" placeholder="Digite sua senha">
+        </div>
+        <!-- Select e options -->
+        <div>
+            <label for="profissoes">Selecione a sua profissão:</label>
+            <select name="profissoes">
+                <option value="programador">Programador</option>
+                <option value="engenheiro">Engenheiro</option>
+                <option value="advogado">Advogado</option>
+                <option value="desempregado">Desempregado</option>
+            </select>
+        </div>
+        <!-- Select com opção já selecionada -->
+        <div>
+            <label for="contract">Leu os termos do contrato?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+        <!-- Multiple Select -->
+        <div>
+            <label for="market">Itens:</label>
+            <select name="market" multiple>
+                <option value="mouse">Mouse</option>
+                <option value="teclado">Teclado</option>
+                <option value="headset">Headset</option>
+            </select>
+        </div>
+        <!-- "Textarea" -->
+         <div>
+            <label for="feedback">Deixe aqui a sua avaliação:</label>
+            <textarea name="feedback"></textarea>
+         </div>
+        <!-- Usando o "fieldset" e "legend" para ligar labels semelhantes à inputs-->
+         <div>
+            <fieldset>
+                <legend>Preencha as suas informações:</legend>
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" name="nome" placeholder="Seu nome">
+                <label for="sobrenome">Digite seu sobrenome:</label>
+                <input type="text" name="sobrenome" placeholder="Seu sobrenome">
+            </fieldset>
+         </div>
+         <!-- "Datalist" -->
+         <div>
+            <label for="flavor">Escolha o sabor:</label>
+            <input type="text" list="flavors" name="flavor">
+
+            <datalist id="flavors">
+                <option value="morango"></option>
+                <option value="chocolate"></option>
+                <option value="baunilha"></option>
+            </datalist>
+         </div>
+
+         <!-- Usando o input "radio" - diferentemente do select, ele não esconde as opções -->
+        <div>
+            <label for="car_Model">Escolha o modelo do seu carro:</label>
+            <div class="radio">
+                <input type="radio" value="bmw" name="car_Model">
+                <label for="bmw">BMW</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="renault" name="car_Model">
+                <label for="renault">Renault</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="peugeot" name="car_Model">
+                <label for="peugeot">Peugeot</label>
+            </div>
+        </div>
+         <!-- Input "checkbox" => parecido com input radio porém com múltiplas seleções e podendo desselecionar uma opção-->
+        <div>
+            <label for="opcionais">Escolha os opcionais do seu veículo:</label>
+            <div class="radio">
+                <input type="checkbox" name="opcionais[]" value="rodas_ligaleve">
+                <label for="rodas_ligaleve">Rodas de Liga-Leve</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="opcionais[]" value="painel_solar">
+                <label for="painel_solar">Painel Solar</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="opcionais[]" value="rodas_ligaleve">
+                <label for="rodas_ligaleve">Rodas de Liga-Leve</label>
+            </div>
+        </div>
+        <!-- Input "data" -->
+        <div>
+            <label for="aniversario">Data de aniversário:</label>
+            <input type="date" name="aniversario">
+        </div>
+        <!-- Input "file" - usado para enviar arquivos -->
+        <div>
+            <label for="foto-perfil">Envie aqui a sua foto de perfil:</label>
+            <input type="file" name="foto-perfil">
+        </div>
+        <!-- Input "number" - usar apenas em casos específicos que utilizem apenas números -->
+        <div>
+            <label for="salario">Qual é a sua renda atual?</label>
+            <input type="number" name="salario">
+        </div>
+        <!-- Input "email" - valida alguns quesitos para checar se é um email, como "@" -->
+        <div>
+            <label for="email">Digite seu email:</label>
+            <input type="email" name="email">
+        </div>
+        <!-- Atributo "value" - preenche o input text (pode ser usado para sistema de edição das informações)-->
+        <div>
+            <label for="value">Digite um valor:</label>
+            <input type="text" value="Este é meu valor" name="value">
+        </div>
+        <!-- Atributo "disabled" - disabilita a edição do input - ignora o input no formulário -->
+        <div>
+            <span>Tente mudar o valor</span>
+            <input type="text" value="Não é necessário preencher" disabled>
+        </div>
+        <!-- Atributo "required" - obriga um elemento a ser preenchido -->
+        <div>
+            <label for="required">Preencha seu e-mail:</label>
+            <input type="text" placeholder="Digite seu email" required>
+        </div>
+
+
+
+
+         <!-- Input para enviar o formulário -->
+        <input type="submit" value="Acessar">
+         <!-- Input reset para limpar o formulário -->
+        <input type="reset" name="" value="Limpar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncie seu veículo</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+                      <!-- Formulário para anúncio de veículos -->
+<div class="container">
+  <div class="header">
+      <h1>Cadastre seu veículo para vender mais rápido!</h3>
+  </div>
+  <div class="form-container">
+    <div class="form-header">
+        <p>Formulário</p>
+    </div>
+    <div class="form-body">
+      <h2 class="form-title">Anuncie seu veículo:</h2>
+      <p>Descreva as características e marque os opcionais do veículo.</p>
+      <form action="formulario.html" method="get" >
+        <div class="box-input">
+          <label for="car-brand">Marca do veículo <span class="required-field">*</span></label>
+          <input type="text" class="block" name="car-brand" list="brands" placeholder="Digite a marca do veículo">
+          <datalist id="brands" class="block" required>
+            <option value="Fiat"></option>
+            <option value="Chevrolet"></option>
+            <option value="Renault"></option>
+            <option value="Volkswagen"></option>
+            <option value="BMW"></option>
+            <option value="Audi"></option>
+            <option value="Mercedes-Benz"></option>
+          </datalist>
+        </div>
+
+        <div class="box-input">
+          <label for="car-model">Modelo do veículo <span class="required-field">*</span></label>
+          <input type="text" name="car-model" class="block" placeholder="Digite o modelo do veículo" required>
+        </div>
+
+        <div class="box-input">
+          <label for="product-price">Defina um preço <span class="required-field">*</span></label>
+          <input type="number" name="product-price" class="block" placeholder="Defina o valor" required>
+        </div>
+
+        <div class="box-input">
+          <label for="vehicle-age">Ano do veículo <span class="required-field">*</span></label>
+          <input type="number" name="vehicle-age" class="block" placeholder="Digite o ano do veículo" required>
+        </div>
+
+        <div class="box-input">
+          <label for="vehicle-description">Descrição</label>
+          <textarea name="vehicle-description" class="block" placeholder="Aqui você coloca os detalhes do veículo, se há algum arranhão por exemplo"></textarea>
+        </div>
+
+        <div class="box-input">
+          <label for="vehicle-mileage">Kilometragem <span class="required-field">*</span></label>
+          <input type="number" name="vehicle-mileage" class="block" placeholder="Digite a kilometragem do veículo" required>
+        </div>
+
+        <div class="box-input">
+          <p>Tipo de câmbio do veículo <span class="required-field">*</span></p>
+          <div class="radio">
+            <input type="radio" name="vehicle-transmission" id="manual">
+            <label for="manual">Manual</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="vehicle-transmission" id="automatic">
+            <label for="automatic">Automático</label>
+          </div>
+        </div>
+
+        <div class="optional-box">
+          <p>Selecione os opcionais do veículo</p>
+          <ul class="optional-list">
+            <li>
+              <input type="checkbox" name="checkbox[]" id="airbag">
+              <label for="airbag">AirBag</label>
+            </li>
+            <li>
+              <input type="checkbox" name="checkbox[]" id="alarm">
+              <label for="alarm">Alarme</label>
+            </li>
+            <li>
+              <input type="checkbox" name="checkbox[]" id="abs-brake">
+              <label for="abs-brake">Freio ABS</label>
+            </li>
+          </ul>
+        </div>
+        <div class="optional-box">
+          <ul class="optional-list">
+            <li>
+              <input type="checkbox" name="checkbox[]" id="automatic-pilot">
+              <label for="automatic-pilot">Piloto automático</label>
+            </li>
+            <li>
+              <input type="checkbox" name="checkbox[]" id="reverse-camera">
+              <label for="reverse-camera">Camêra de Ré</label>
+            </li>
+            <li>
+              <input type="checkbox" name="checkbox[]" id="leather-seat">
+              <label for="leather-seat">Bancos de couro</label>
+            </li>
+          </ul>
+        </div>
+        <div class="box-input">
+          <p>Fotos do veículo: <span class="required-field">*</span><p>
+          <input type="file" name="vehicle-img" class="block" id="vehicle-img" multiple accept="image/png, image/jpg" required>
+        </div>
+
+        <input type="submit" value="Anunciar" class="btn-submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
